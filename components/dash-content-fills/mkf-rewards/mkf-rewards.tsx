@@ -1,16 +1,16 @@
 import { InfoCard } from "@/components/info-card.tsx/InfoCard"
 
 export default function MKFRewards() {
-  return <div className="mx-10 text-white">
-    <div className="flex w-full mb-10">
-      <div className="flex-grow mr-5"><InfoCard info="$246,084" title="Total BUSD payed to holders" iconUrl="kite-finance.svg" /></div>
-      <div className="flex-grow mr-5"><InfoCard info="$246,084" title="Total BUSD pending for holders" iconUrl="kite-finance.svg" /></div>
-      <div className="flex-grow mr-5"><InfoCard info="$246,084" title="Total MKF Burned" iconUrl="kite-finance.svg" /></div>
-      <div className="flex-grow"><InfoCard info="$246,084" title="Total Flex Available" iconUrl="kite-finance.svg" /></div>
+  return <div className="mx-10 text-white pb-[53px]">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 content-center w-full mb-10">
+      <div className=""><InfoCard info="$246,084" title="BUSD payed to holders" iconUrl="kite-finance.svg" /></div>
+      <div className=""><InfoCard info="$246,084" title="Total BUSD for holders" iconUrl="kite-finance.svg" /></div>
+      <div className=""><InfoCard info="$246,084" title="Total MKF Burned" iconUrl="kite-finance.svg" /></div>
+      <div className=""><InfoCard info="$246,084" title="Total Flex Available" iconUrl="kite-finance.svg" /></div>
     </div>
     <div>
-      <div className="flex">
-        <div className="flex-grow mr-10">
+      <div className="grid md:grid-cols-2 gap-3">
+        <div className="">
           <div className="mb-5"><span className="font-bold">MasterKey Finance - </span> INFORMATION</div>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">

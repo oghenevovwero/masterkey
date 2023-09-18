@@ -1,4 +1,4 @@
-import TradingViewWidget from '@/components/dash-content-fills/wallet/candle/App'
+import TradingViewWidget from '@/components/dash-content-fills/wallet/candle'
 
 export default function Wallet() {
   return <div className="mx-10 text-white">

@@ -21,7 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
           <img src="down-arrow-svg.svg" alt="Show language options" width={24} height={24} />
         </div>
         <button className="py-2.5 px-4 border-[1px] font-semibold border-white rounded-[16px]" onClick={() => {
-          // router.push('/dashboard')
+          router.push('/dashboard')
         }}>
           MKF/Rewards
         </button>
@@ -34,10 +34,10 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
       </div>
       <div className="flex items-center">
         {/* <button onClick={() => { router.push('/dashboard') }}></button> */}
-        <svg width="24px" height="24px"  color='white' stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path  d="M4 18L20 18"  stroke-width="2" stroke-linecap="round" />
-          <path  d="M4 12L20 12"  stroke-width="2" stroke-linecap="round" />
-          <path  d="M4 6L20 6"  stroke-width="2" stroke-linecap="round" />
+        <svg width="24px" height="24px" color='white' stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18L20 18" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 12L20 12" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 6L20 6" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
     </div>

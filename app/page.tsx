@@ -24,8 +24,7 @@ export default function Home() {
             </p>
             <div>
               <button className="py-2.5 px-4 bg-[#61FFCB] font-semibold rounded-[16px]">
-                {/* <Link href="/dashboard">MKF/Rewards</Link> */}
-                MKF/Rewards
+                <Link href="/dashboard">MKF/Rewards</Link>                
               </button>
               <button className="ml-4 py-2.5 px-4 border-[1px] text-[#61FFCB] font-semibold border-[#61FFCB] rounded-[16px]">
                 Learn More

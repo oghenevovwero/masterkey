@@ -13,6 +13,7 @@ import Unstake from "@/components/unstake/unstake";
 import { useState } from 'react';
 import { useTheme } from "next-themes"
 import { useRouter } from "next/navigation";
+import LogOutModal from "@/components/modal/modal";
 
 enum ActiveComponet {
   "rewards", "wallet", "trade", "staking", "stake", "unstake", "listToken", "claim", "terminate"
@@ -24,15 +25,28 @@ export default function Dashboard() {
   const { setTheme } = useTheme()
   const profileImageUrl = "https://s3-alpha-sig.figma.com/img/3389/ec29/9edb640f65b7cb2d606c9ae4d3bd74e2?Expires=1695600000&Signature=O3Pa9QfrfFFwQ8TBO-o7trvitgU6tFBWDaH0Hs7nO06JWtFfWsKY9VTGilF05VFbBWlDwwlLXKOn2cwSuTk3lu4SIjMlUKxf7EEQx-XbUBIxpDGPqxO6snWm2PulGRoK5czjaftyrWmYusk1imE8n8ImUV2e~ZOdBXdXBfdYUm89yGFBz6FGGm7WoW1oBOL7NN1Oxrpzo4UNwgqOFUuDZX1FdBmj9-GiuDDHJh1PGAmk4-wVnIysw~GVKWUMnnW6vhDvM2RSHcj3iXUDlishd1aPhKjgLuo~gK~IcP7Qgcmster2TPiP7EHf0EvmSJiwpMxZl6kFOU-ZYBv0SkZp6Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4";
   const [activeComponent, setActiveComponent] = useState(ActiveComponet.rewards);
+  const [displayModal, setDisplayModal] = useState(false);
 
-  return <div className="bg-gradient-to-r from-[#5B358B] to-[#4938A0] h-full">
+  return <div className="bg-gradient-to-r from-[#5B358B] to-[#4938A0] pb-5">
+    <div>
+      <LogOutModal displayModal={displayModal} setDisplayModal={setDisplayModal} />
+    </div>
     <div className="py-8 px-10 text-white">
       <div className="flex justify-between items-center">
-        <div className="flex items-center hover:cursor-pointer" onClick={() => {
-          router.push("/");
-        }}>
-          <img width={35} height={34} className="mr-1" src="masterkey.png" alt="The svg for hostinger" />
-          <p className='text-[30px] font-bold'>Masterkey finance</p>
+        <div className="flex items-center">
+          <div className="lg:hidden mr-3">
+            <svg width="24px" height="24px" color='white' stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 18L20 18" stroke-width="2" stroke-linecap="round" />
+              <path d="M4 12L20 12" stroke-width="2" stroke-linecap="round" />
+              <path d="M4 6L20 6" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div className="flex items-center hover:cursor-pointer" onClick={() => {
+            router.push("/");
+          }}>
+            <img width={35} height={34} className="mr-1" src="masterkey.png" alt="The svg for hostinger" />
+            <p className='max-lg:hidden text-[30px] font-bold'>Masterkey finance</p>
+          </div>
         </div>
         <div className="flex items-center justify-between">
           <div className="relative mr-5">
@@ -50,81 +64,83 @@ export default function Dashboard() {
       </div>
     </div>
 
-    <div className="flex">
-      <div>
-        <div className="ml-10 text-white">
-          <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
-            setActiveComponent(ActiveComponet.rewards)
-          }}>
-            <div className="mr-3">
-              <img src="reward.svg" alt="rewards" width={24} height={24} />
+    <div className="lg:flex">
+      <div className="max-lg:hidden flex justify-between">
+        <div>
+          <div className="ml-10 text-white">
+            <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
+              setActiveComponent(ActiveComponet.rewards)
+            }}>
+              <div className="mr-3">
+                <img src="reward.svg" alt="rewards" width={24} height={24} />
+              </div>
+              <div>MKF/Rewards</div>
             </div>
-            <div>MKF/Rewards</div>
-          </div>
-          <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
-            setActiveComponent(ActiveComponet.wallet)
-          }}>
-            <div className="mr-3">
-              <img src="wallet.svg" alt="rewards" />
+            <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
+              //setActiveComponent(ActiveComponet.wallet)
+            }}>
+              <div className="mr-3">
+                <img src="wallet.svg" alt="rewards" />
+              </div>
+              <div>Wallet</div>
             </div>
-            <div>Wallet</div>
-          </div>
-          <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
-            setActiveComponent(ActiveComponet.trade)
-          }}>
-            <div className="mr-3">
-              <img src="trade.svg" alt="trade" />
+            <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
+              //setActiveComponent(ActiveComponet.trade)
+            }}>
+              <div className="mr-3">
+                <img src="trade.svg" alt="trade" />
+              </div>
+              <div>Trade tokens</div>
             </div>
-            <div>Trade tokens</div>
-          </div>
-          <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-            setActiveComponent(ActiveComponet.listToken)
-          }}>List token</div>
-          <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-            setActiveComponent(ActiveComponet.claim)
-          }}>Claim tokens</div>
-          <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-            setActiveComponent(ActiveComponet.terminate)
-          }}>Cancel listing</div>
-          <div className="mb-3 flex items-center hover:cursor-pointer" onClick={() => {
-            setActiveComponent(ActiveComponet.staking)
-          }}>
-            <div className="mr-3">
-              <img src="stake.svg" alt="stake" />
+            <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
+              //setActiveComponent(ActiveComponet.listToken)
+            }}>List token</div>
+            <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
+              //setActiveComponent(ActiveComponet.claim)
+            }}>Claim tokens</div>
+            <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
+              //setActiveComponent(ActiveComponet.terminate)
+            }}>Cancel listing</div>
+            <div className="mb-3 flex items-center hover:cursor-pointer" onClick={() => {
+              //setActiveComponent(ActiveComponet.staking)
+            }}>
+              <div className="mr-3">
+                <img src="stake.svg" alt="stake" />
+              </div>
+              <div>{activeComponent === ActiveComponet.stake || activeComponent === ActiveComponet.unstake ? "Stake" : "Staking"}</div>
             </div>
-            <div>{activeComponent === ActiveComponet.stake || activeComponent === ActiveComponet.unstake ? "Stake" : "Staking"}</div>
-          </div>
-          <div className="mb-3 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-            setActiveComponent(ActiveComponet.stake)
-          }}>Confirm stake</div>
-          <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-            setActiveComponent(ActiveComponet.unstake)
-          }}>Cancel stake</div>
-          <div className="mb-10 flex items-center hover:cursor-pointer">
-            <div className="mr-3">
-              <img src="logout.svg" alt="" />
+            <div className="mb-3 flex items-center hover:cursor-pointer ml-9" onClick={() => {
+              //setActiveComponent(ActiveComponet.stake)
+            }}>Confirm stake</div>
+            <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
+              //setActiveComponent(ActiveComponet.unstake)
+            }}>Cancel stake</div>
+            <div className="mb-10 flex items-center hover:cursor-pointer">
+              <div className="mr-3">
+                <img src="logout.svg" alt="" />
+              </div>
+              <div>Log Out</div>
             </div>
-            <div>Log Out</div>
           </div>
-        </div>
-        <div className="flex items-center">
-          <div className="text-white ml-10 mr-1">Enable Dark Mode</div>
-          <div onClick={() => {
-            if (isLight) {
-              setTheme("dark")
-              setIsLight(false);
-            } else {
-              setTheme("light")
-              setIsLight(true);
-            }
-          }}>
-            {
-              isLight
-                ?
-                <img src="toggle-off.svg" alt="The enable dark mode button toggle" />
-                :
-                <img src="toggle-on.svg" alt="The enable dark mode button toggle" />
-            }
+          <div className="flex items-center">
+            <div className="text-white ml-10 mr-1">Enable Dark Mode</div>
+            <div onClick={() => {
+              // if (isLight) {
+              //   setTheme("dark")
+              //   setIsLight(false);
+              // } else {
+              //   setTheme("light")
+              //   setIsLight(true);
+              // }
+            }}>
+              {
+                isLight
+                  ?
+                  <img src="toggle-off.svg" alt="The enable dark mode button toggle" />
+                  :
+                  <img src="toggle-on.svg" alt="The enable dark mode button toggle" />
+              }
+            </div>
           </div>
         </div>
       </div>
