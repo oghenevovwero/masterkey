@@ -5,7 +5,6 @@ import MKFRewards from "@/components/dash-content-fills/mkf-rewards/mkf-rewards"
 import Staking from "@/components/dash-content-fills/staking/staking";
 import Trade from "@/components/dash-content-fills/trade/trade";
 import Wallet from "@/components/dash-content-fills/wallet/wallet";
-import { DashNav } from "@/components/dash-nav/DashNav"
 import ListToken from "@/components/list-token/list-token";
 import Stake from "@/components/stake/stake";
 import TerminateListing from "@/components/terminate/terminate";
@@ -23,46 +22,54 @@ export default function Dashboard() {
   const [isLight, setIsLight] = useState(true);
   const router = useRouter();
   const { setTheme } = useTheme()
-  const profileImageUrl = "https://s3-alpha-sig.figma.com/img/3389/ec29/9edb640f65b7cb2d606c9ae4d3bd74e2?Expires=1695600000&Signature=O3Pa9QfrfFFwQ8TBO-o7trvitgU6tFBWDaH0Hs7nO06JWtFfWsKY9VTGilF05VFbBWlDwwlLXKOn2cwSuTk3lu4SIjMlUKxf7EEQx-XbUBIxpDGPqxO6snWm2PulGRoK5czjaftyrWmYusk1imE8n8ImUV2e~ZOdBXdXBfdYUm89yGFBz6FGGm7WoW1oBOL7NN1Oxrpzo4UNwgqOFUuDZX1FdBmj9-GiuDDHJh1PGAmk4-wVnIysw~GVKWUMnnW6vhDvM2RSHcj3iXUDlishd1aPhKjgLuo~gK~IcP7Qgcmster2TPiP7EHf0EvmSJiwpMxZl6kFOU-ZYBv0SkZp6Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4";
+  const profileImageUrl = "https:s3-alpha-sig.figma.com/img/3389/ec29/9edb640f65b7cb2d606c9ae4d3bd74e2?Expires=1695600000&Signature=O3Pa9QfrfFFwQ8TBO-o7trvitgU6tFBWDaH0Hs7nO06JWtFfWsKY9VTGilF05VFbBWlDwwlLXKOn2cwSuTk3lu4SIjMlUKxf7EEQx-XbUBIxpDGPqxO6snWm2PulGRoK5czjaftyrWmYusk1imE8n8ImUV2e~ZOdBXdXBfdYUm89yGFBz6FGGm7WoW1oBOL7NN1Oxrpzo4UNwgqOFUuDZX1FdBmj9-GiuDDHJh1PGAmk4-wVnIysw~GVKWUMnnW6vhDvM2RSHcj3iXUDlishd1aPhKjgLuo~gK~IcP7Qgcmster2TPiP7EHf0EvmSJiwpMxZl6kFOU-ZYBv0SkZp6Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4";
   const [activeComponent, setActiveComponent] = useState(ActiveComponet.rewards);
   const [displayModal, setDisplayModal] = useState(false);
 
   return <div className="bg-gradient-to-r from-[#5B358B] to-[#4938A0] pb-5">
-    <div>
-      <LogOutModal displayModal={displayModal} setDisplayModal={setDisplayModal} />
-    </div>
-    <div className="py-8 px-10 text-white">
-      <div className="flex justify-between items-center">
-        <div className="flex items-center">
-          <div className="lg:hidden mr-3">
-            <svg width="24px" height="24px" color='white' stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 18L20 18" stroke-width="2" stroke-linecap="round" />
-              <path d="M4 12L20 12" stroke-width="2" stroke-linecap="round" />
-              <path d="M4 6L20 6" stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </div>
-          <div className="flex items-center hover:cursor-pointer" onClick={() => {
-            router.push("/");
-          }}>
-            <img width={35} height={34} className="mr-1" src="masterkey.png" alt="The svg for hostinger" />
-            <p className='max-lg:hidden text-[30px] font-bold'>Masterkey finance</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="relative mr-5">
-            <img src="notification.svg" alt="Show language options" width={24} height={24} />
-            <span className="absolute top-[-8px] right-0 bg-[#FC0A0A] inline-flex items-center justify-center w-2 h-2 p-2 text-sm font-medium rounded-full">6</span>
-          </div>
-          <div className="mr-5">
-            <img src="settings.svg" alt="Show language options" width={24} height={24} />
-          </div>
+    <div className='fixed top-0 w-full z-10 mb-12 shadow-md'>
+      <div className="py-8 px-10 text-white bg-gradient-to-r from-[#5B358B] to-[#4938A0]">
+        <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <div className="mr-2">chineduzino</div>
-            <img src={profileImageUrl} className="rounded-full" alt="Show language options" width={50} height={50} />
+            <div className="lg:hidden mr-3">
+              <svg width="24px" height="24px" color='white' stroke='currentColor' viewBox="0 0 24 24" xmlns="http:www.w3.org/2000/svg">
+                <path d="M4 18L20 18" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 12L20 12" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 6L20 6" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div className="flex items-center hover:cursor-pointer" onClick={() => {
+              router.push("/");
+            }}>
+              <img width={35} height={34} className="mr-1" src="masterkey.png" alt="The svg for hostinger" />
+              <p className='max-lg:hidden text-[30px] font-bold'>Masterkey finance</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="relative mr-5">
+              <img src="notification.svg" alt="Show language options" width={24} height={24} />
+              <span className="absolute top-[-8px] right-0 bg-[#FC0A0A] inline-flex items-center justify-center w-2 h-2 p-2 text-sm font-medium rounded-full">6</span>
+            </div>
+            <div className="mr-5">
+              <img src="settings.svg" alt="Show language options" width={24} height={24} />
+            </div>
+            <div className="flex items-center">
+              <div className="mr-2">chineduzino</div>
+              <img src={profileImageUrl} className="rounded-full" alt="Show language options" width={50} height={50} />
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div className='h-[130px]'></div>
+
+    {displayModal &&
+      <div className="text-white text-[200px]">
+        Hello
+        <LogOutModal displayModal={displayModal} setDisplayModal={setDisplayModal} />
+      </div>
+    }
 
     <div className="lg:flex">
       <div className="max-lg:hidden flex justify-between">
@@ -72,49 +79,110 @@ export default function Dashboard() {
               setActiveComponent(ActiveComponet.rewards)
             }}>
               <div className="mr-3">
-                <img src="reward.svg" alt="rewards" width={24} height={24} />
+                <img src="reward.svg" alt="trade" />
               </div>
-              <div>MKF/Rewards</div>
+              <div>
+                {
+                  activeComponent === ActiveComponet.rewards
+                    ?
+                    <div className="text-[#61FFCB]"> Rewards </div>
+                    : <div> Rewards </div>
+                }
+              </div>
             </div>
             <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
-              //setActiveComponent(ActiveComponet.wallet)
+              setActiveComponent(ActiveComponet.wallet)
             }}>
               <div className="mr-3">
                 <img src="wallet.svg" alt="rewards" />
               </div>
-              <div>Wallet</div>
+              <div>
+                {
+                  activeComponent === ActiveComponet.wallet
+                    ?
+                    <div className="text-[#61FFCB]"> Wallet </div>
+                    : <div> Wallet </div>
+                }
+              </div>
             </div>
             <div className="mb-6 flex items-center hover:cursor-pointer" onClick={() => {
-              //setActiveComponent(ActiveComponet.trade)
+              setActiveComponent(ActiveComponet.trade)
             }}>
               <div className="mr-3">
                 <img src="trade.svg" alt="trade" />
               </div>
-              <div>Trade tokens</div>
+              {
+                activeComponent === ActiveComponet.trade
+                  ?
+                  <div className="text-[#61FFCB]"> Trade tokens </div>
+                  : <div> Trade tokens </div>
+              }
             </div>
             <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-              //setActiveComponent(ActiveComponet.listToken)
-            }}>List token</div>
+              setActiveComponent(ActiveComponet.listToken)
+            }}>
+              {
+                activeComponent === ActiveComponet.listToken
+                  ?
+                  <div className="text-[#61FFCB]"> List tokens </div>
+                  : <div> List tokens </div>
+              }
+            </div>
             <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-              //setActiveComponent(ActiveComponet.claim)
-            }}>Claim tokens</div>
+              setActiveComponent(ActiveComponet.claim)
+            }}>
+              {
+                activeComponent === ActiveComponet.claim
+                  ?
+                  <div className="text-[#61FFCB]"> Claim tokens </div>
+                  : <div> Claim tokens </div>
+              }
+            </div>
             <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-              //setActiveComponent(ActiveComponet.terminate)
-            }}>Cancel listing</div>
+              setActiveComponent(ActiveComponet.terminate)
+            }}>
+              {
+                activeComponent === ActiveComponet.terminate
+                  ?
+                  <div className="text-[#61FFCB]"> Cancel listing </div>
+                  : <div> Cancel listing </div>
+              }
+            </div>
             <div className="mb-3 flex items-center hover:cursor-pointer" onClick={() => {
-              //setActiveComponent(ActiveComponet.staking)
+              setActiveComponent(ActiveComponet.staking)
             }}>
               <div className="mr-3">
                 <img src="stake.svg" alt="stake" />
               </div>
-              <div>{activeComponent === ActiveComponet.stake || activeComponent === ActiveComponet.unstake ? "Stake" : "Staking"}</div>
+              <div>
+                {
+                  activeComponent === ActiveComponet.staking
+                    ?
+                    <div className="text-[#61FFCB]"> Staking </div>
+                    : <div> Staking </div>
+                }
+              </div>
             </div>
             <div className="mb-3 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-              //setActiveComponent(ActiveComponet.stake)
-            }}>Confirm stake</div>
+              setActiveComponent(ActiveComponet.stake)
+            }}>
+              {
+                activeComponent === ActiveComponet.stake
+                  ?
+                  <div className="text-[#61FFCB]"> Stake </div>
+                  : <div> Stake </div>
+              }
+            </div>
             <div className="mb-6 flex items-center hover:cursor-pointer ml-9" onClick={() => {
-              //setActiveComponent(ActiveComponet.unstake)
-            }}>Cancel stake</div>
+              setActiveComponent(ActiveComponet.unstake)
+            }}>
+              {
+                activeComponent === ActiveComponet.unstake
+                  ?
+                  <div className="text-[#61FFCB]"> Unstake </div>
+                  : <div> Unstake </div>
+              }
+            </div>
             <div className="mb-10 flex items-center hover:cursor-pointer">
               <div className="mr-3">
                 <img src="logout.svg" alt="" />
@@ -125,13 +193,13 @@ export default function Dashboard() {
           <div className="flex items-center">
             <div className="text-white ml-10 mr-1">Enable Dark Mode</div>
             <div onClick={() => {
-              // if (isLight) {
-              //   setTheme("dark")
-              //   setIsLight(false);
-              // } else {
-              //   setTheme("light")
-              //   setIsLight(true);
-              // }
+              if (isLight) {
+                setTheme("dark")
+                setIsLight(false);
+              } else {
+                setTheme("light")
+                setIsLight(true);
+              }
             }}>
               {
                 isLight
@@ -199,5 +267,5 @@ export default function Dashboard() {
         </div>
       }
     </div>
-  </div >
+  </div>
 }

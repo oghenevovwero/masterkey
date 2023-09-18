@@ -6,7 +6,7 @@ interface InfoCardProps {
 
 export const InfoCard: React.FC<InfoCardProps> = ({ info, title, iconUrl }) => {
   return <div className="rounded-xl bg-[#6A3F9F] p-5 text-white">
-    <div className="text-[12px] mb-5">{title}</div>
+    <div className="mb-5">{title}</div>
     <div className="flex justify-between items-center">
       <div className="relative h-12 w-12 bg-white rounded-full">
         <div className="absolute top-1 left-1">

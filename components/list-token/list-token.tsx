@@ -1,5 +1,5 @@
 export default function ListToken() {
-  return <div className="flex w-full items-center justify-center px-10 text-white">
+  return <div className="px-5 text-white pb-[350px]">
     <div>
       <div className="font-extrabold text-[40px]">List Token</div>
       <div className="font-bold text[28px] mb-5">
@@ -25,17 +25,17 @@ export default function ListToken() {
           <img src="down-arrow-black.svg" className="absolute top-6 right-4" alt="Show language options" width={24} height={24} />
         </div>
       </div>
-      <div className="flex justify-between">
-        <button className="mt-5 py-3 px-2 flex-grow mr-5 text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
+        <button className="py-3 px-2 text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
           Authorized BNB
         </button>
-        <button className="mt-5 py-3 px-2 flex-grow mr-5 text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
+        <button className="py-3 px-2 text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
           Authorized token to be listed
         </button>
-        <button className="mt-5 py-3 px-2 flex-grow mr-5 text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
+        <button className="py-3 px-2 text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
           Authorized MKF
         </button>
-        <button className="mt-5 py-3 px-2 flex-grow text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
+        <button className="py-3 px-2 flex-grow text-[#61FFCB] border-[1px] border-[#61FFCB] font-semibold rounded-[12px]">
           Post Listing
         </button>
       </div>

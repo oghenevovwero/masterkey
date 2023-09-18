@@ -1,5 +1,5 @@
 export default function Stake() {
-  return <div className="flex items-center justify-center">
+  return <div className="flex items-center justify-center pb-[200px]">
     <div className="w-[600px] bg-[#6A3F9F] p-6 rounded-lg text-white">
       <div className="font-extrabold text-[40px]">Stake Token</div>
       <div className="font-bold text[28px]">Select Token to Stake</div>

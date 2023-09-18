@@ -15,12 +15,13 @@ export default function LogOutModal({ displayModal, setDisplayModal }: { display
           <p className="text-sm text-gray-500">Account has been Successful registered.</p>
         </div>
         <div className="items-center px-4 py-3">
-          <button id="ok-btn"
-            className="px-4 py-2 bg-purple-500 text-white
-                            text-base font-medium rounded-md w-full
-                            shadow-sm hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300">
-            OK
-          </button>
+          <button onClick={() => { setDisplayModal(false) }}
+            className="
+            px-4 py-2 bg-purple-500 
+            text-white text-base font-medium rounded-md w-full 
+            shadow-sm hover:bg-purple-600 focus:outline-none 
+            focus:ring-2 focus:ring-purple-300"
+          > OK </button>
         </div>
       </div>
     </div>
