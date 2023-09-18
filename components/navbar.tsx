@@ -7,7 +7,7 @@ interface NavbarProps { }
 export const Navbar: React.FC<NavbarProps> = ({ }) => {
   const router = useRouter();
 
-  return <div className="py-8 px-10 bg-gradient-to-r from-[#5B358B] to-[#4938A0] text-white">
+  return <div className="py-7 px-10 bg-gradient-to-r from-[#5B358B] to-[#4938A0] text-white">
     <div className="max-lg:hidden flex justify-between items-center">
       <div className="flex items-center">
         <img width={35} height={34} className="mr-1" src="masterkey.png" alt="The svg for hostinger" />
@@ -31,12 +31,12 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
         <img width={35} height={34} className="mr-1" src="masterkey.png" alt="The svg for hostinger" />
         <p className='text-[20px] font-bold'>Masterkey finance</p>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center text-white">
         {/* <button onClick={() => { router.push('/dashboard') }}></button> */}
-        <svg width="24px" height="24px" fill='white' color='' stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path fill='white' d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-          <path fill='white' d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-          <path fill='white' d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+        <svg width="24px" height="24px" stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path  d="M4 18L20 18"  stroke-width="2" stroke-linecap="round" />
+          <path  d="M4 12L20 12"  stroke-width="2" stroke-linecap="round" />
+          <path  d="M4 6L20 6"  stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
     </div>
