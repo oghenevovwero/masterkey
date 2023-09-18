@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Home() {
   const gifUrl = "https://s3-alpha-sig.figma.com/img/92fa/31ac/1eb87a800c0901081233abf343dbd880?Expires=1695600000&Signature=K~YtzYuKDhqhmOBq9wD2RNtrD4xeryVHADEv3LQzu4RFn0H1toYWu5-dgsefOohp0RDb1P3bkTrwMKD6~zpGis8q3nbvDBxiZEFtry4sYsE4f2fcHOAAGfdks2SV0Wsjz-v2OWg75mfyByaJyWy920nlLIFRpDGRBr54c83Gw9MpS6mNr1L9aF2OZVIJflKT-hVzHtx4CdF~arho3ON2YZnorrW1yvKj2IBuPYPKBrzq6j1rnCNj-wCXTi8xN42zAiIdpmDMCh-VQX8CFYZSn8cJzmxTl633~2XPDeFUFdUs3mBUE6bXgwy5uxRbv9oaol7RRnpPFsA4PtzOXnB5Nw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-  return <div className="flex flex-row bg-gradient-to-r from-[#5B358B] to-[#4D62AA] overflow-hidden pb-[100px]">
+  return <div className="flex flex-row bg-gradient-to-r from-[#5B358B] to-[#4D62AA] overflow-hidden pb-[1000px]">
     <div>
       <div className='fixed top-0 w-full z-10 mb-12 shadow-md'>
         <Navbar />

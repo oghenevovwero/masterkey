@@ -160,7 +160,7 @@ export default function Dashboard() {
                     ?
                     <div className="text-[#61FFCB]"> Staking </div>
                     : <div> Staking </div>
-                }
+                }                
               </div>
             </div>
             <div className="mb-3 flex items-center hover:cursor-pointer ml-9" onClick={() => {
