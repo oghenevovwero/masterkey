@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation';
+import React from 'react'
 
 interface NavbarProps { }
 
@@ -31,9 +32,9 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
         <img width={35} height={34} className="mr-1" src="masterkey.png" alt="The svg for hostinger" />
         <p className='text-[20px] font-bold'>Masterkey finance</p>
       </div>
-      <div className="flex items-center text-white">
+      <div className="flex items-center">
         {/* <button onClick={() => { router.push('/dashboard') }}></button> */}
-        <svg width="24px" height="24px" stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24px" height="24px"  color='white' stroke='currentColor' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path  d="M4 18L20 18"  stroke-width="2" stroke-linecap="round" />
           <path  d="M4 12L20 12"  stroke-width="2" stroke-linecap="round" />
           <path  d="M4 6L20 6"  stroke-width="2" stroke-linecap="round" />
