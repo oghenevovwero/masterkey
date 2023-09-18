@@ -10,7 +10,7 @@ export default function Home() {
       </div>
       <div className="grid md:grid-cols-2">
         <div className="max-md:mx-5 md:ml-10 max-md:order-last">
-          <div className='md:mt-24'>
+          <div className='lg:mt-24'>
             <p className="text-[48px] tracking-widest text-white font-extrabold mb-10">
               The future of <span className="text-[#61FFCB]">DeFi</span><br />
               Experience power, <br />
