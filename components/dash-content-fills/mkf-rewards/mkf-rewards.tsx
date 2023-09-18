@@ -45,7 +45,7 @@ export default function MKFRewards() {
             <div>BNB Address</div>
             <div> aejkprrfvfuyehejxn </div>
           </div>
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-6 mt-[52px]">
             <button className="py-2.5 px-4 flex-grow text-black bg-[#61FFCB] font-semibold rounded-[12px]">
               Buy
             </button>
