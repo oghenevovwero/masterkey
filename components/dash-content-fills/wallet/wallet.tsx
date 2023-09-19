@@ -15,7 +15,7 @@ export default function Wallet() {
       <div>
         <div><span className="text-[12px] font-light">Token Balance:</span> 67 809668894948938390</div>
         <div className="flex justify-end mt-5">
-          <div className="text-[#00EB64]">$20.91</div>
+          <div className="text-[#00EB64] text-[28px]">$20.91</div>
         </div>
       </div>
     </div>

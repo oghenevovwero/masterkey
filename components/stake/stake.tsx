@@ -1,6 +1,6 @@
 export default function Stake() {
-  return <div className="flex items-center justify-center pb-[200px]">
-    <div className="w-[600px] bg-[#6A3F9F] p-6 rounded-lg text-white">
+  return <div className="flex items-center mx-2 justify-center pb-[200px]">
+  <div className="max-lg:w-full bg-[#6A3F9F] p-6 md:p-12 rounded-lg text-white">
       <div className="font-extrabold text-[40px]">Stake Token</div>
       <div className="font-bold text[28px]">Select Token to Stake</div>
       <div className="mb-5">

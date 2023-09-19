@@ -1,11 +1,11 @@
 export default function Unstake() {
-  return <div className="flex items-center justify-center pb-[200px]">
-    <div className="w-[600px] bg-[#6A3F9F] p-6 rounded-lg text-white">
+  return <div className="flex items-center mx-2 justify-center pb-[200px]">
+    <div className="max-lg:w-full bg-[#6A3F9F] p-6 md:p-12 rounded-lg text-white">
       <div className="font-extrabold text-[40px]">Unstake Token</div>
       <div className="font-bold text[28px]">Select Token to Stake</div>
       <div className="mb-5">
         Note: You can only claim rewards once tokens are unstaked; You can<br />
-        unstake at any time. Rewards are only received after every 24hours.
+        unstake at any time. Rewards are only received ater every 24hours.
       </div>
       <div>
         <div className="relative w-full">
